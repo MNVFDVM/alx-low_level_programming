@@ -1,1 +1,1 @@
-repo for C projects
+this repo is for c projects
