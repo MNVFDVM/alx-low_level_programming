@@ -4,7 +4,7 @@
  */
 void time_table(void)
 {
-	int n, mul product;
+	int n, mul, product;
 
 	for (n = 0; n <= 9; n++)
 	{
