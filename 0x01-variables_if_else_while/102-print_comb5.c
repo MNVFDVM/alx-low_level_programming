@@ -12,7 +12,7 @@ int main(void)
 
 	while (firstDigit <= 99)
 	{
-		seconDigit = firstDigit
+		seconDigit = firstDigit;
 		while (seconDigit <= 99)
 		{
 			if (seconDigit != firstDigit)
@@ -31,7 +31,7 @@ int main(void)
 			}
 			seconDigit++;
 		}
-		firatDigit++;
+		firstDigit++;
 	}
 	putchar('\n');
 
