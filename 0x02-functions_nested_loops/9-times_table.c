@@ -1,8 +1,8 @@
 #include "main.h"
 /**
- * time_table - function to print 9 time table
+ * times_table - function to print 9 time table
  */
-void time_table(void)
+void times_table(void)
 {
 	int n, mul, product;
 
