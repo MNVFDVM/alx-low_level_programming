@@ -18,7 +18,7 @@ int main(void)
 			if (seconDigit != firstDigit)
 			{
 				putchar((firstDigit / 10) + 48);
-				putchar(firstDigit % 10) + 48);
+				putchar((firstDigit % 10) + 48);
 				putchar(' ');
 				putchar((seconDigit / 10) + 48);
 				putchar((seconDigit % 10) + 48);
