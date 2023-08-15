@@ -1,4 +1,4 @@
-#include "main.hi"
+#include "main.h"
 /**
  * print_times_table - print the time table of n
  *
