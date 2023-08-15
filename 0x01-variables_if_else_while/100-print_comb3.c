@@ -2,7 +2,7 @@
 /**
  * main - entry point
  *
- * description: print all different combinations of two digits
+ * description: print all possible different cobinations of two digits
  *
  * Return: Always 0 (success)
  */
@@ -13,7 +13,7 @@ int main(void)
 	while (digit1 <= 9)
 	{
 		digit2 = 0;
-		while (digit2 <= 9)
+		while digit2 <= 9)
 		{
 			if (digit1 != digit2 && digit1 < digit2)
 			{
