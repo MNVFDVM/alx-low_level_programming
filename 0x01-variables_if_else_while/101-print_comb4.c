@@ -1,37 +1,42 @@
-#include <stdio.h>
+#include <sydio.h>
 /**
  * main - entry point
  *
- * description: print all possible different combinations of two digits
+ * description: print all different combinations of two digits
  *
- * Return: 0
+ * Return: Always 0 (success)
  */
 int main(void)
 {
-	int firstDigit = 0, seconDigit;
+	int digit1 = 0;
+	int digit2, digit3;
 
-	while (firstDigit <= 99)
+	while (digit1 <= 9)
 	{
-		seconDigit = firstDigit;
-		while (seconDigit <= 99)
+		digit2 = 0;
+		while (digit2 <= 9)
 		{
-			if (seconDigit != firstDigit)
+			digit3 = 0;
+			while (digit3 <= 9)
 			{
-				putchar((firstDigit / 10) + 48);
-				putchar((firstDigit % 10) + 48);
-				putchar(' ');
-				putchar((seconDigit / 10) + 48);
-				putchar((seconDigit / 10) + 48);
-
-				if (firstDigit != 98 || seconDigit != 99)
+				if (digit1 != digit2 && digit1 < digit2 &&
+				digit2 != digit3 && digit2 < digit3)
 				{
-					putchar(',');
-					putchar(' ');
+					putchar(digit1 + 48);
+					putchar(digit2 + 48);
+					putchar(digit3 + 48);
+
+					if (digit1 + digit2 + digit3 != 24)
+					{
+						putchar(',');
+						putchar(' ');
+					}
 				}
+				digit3++;
 			}
-			seconDigit++;
+			digit2++;
 		}
-		firstDigit++;
+		digit1++;
 	}
 	putchar('\n');
 
