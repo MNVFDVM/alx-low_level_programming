@@ -2,13 +2,11 @@
 /**
  * numLength - compute the length of string
  *
- * description: compute the length of string
- *
  * @num: operand number
  *
  * Return: number of digits
  */
-int numlength(int num)
+int numLength(int num)
 {
 	int length = 0;
 
