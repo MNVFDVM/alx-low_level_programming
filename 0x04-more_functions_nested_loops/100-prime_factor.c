@@ -40,7 +40,7 @@ void largest_prime_factor(long int n)
 		}
 	}
 	if (n > 2)
-		largest = 2;
+		largest = n;
 	printf("%d\n", largest);
 }
 /**
