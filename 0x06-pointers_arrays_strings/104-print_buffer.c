@@ -32,7 +32,7 @@ void printHexes(char *a, int start, int end)
 		if (j < end)
 			printf("%02x", *(a + start + j));
 		else
-			printf(" ");
+			printf("  ");
 		if (j % 2)
 			printf(" ");
 		j++;
