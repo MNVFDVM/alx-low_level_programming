@@ -10,7 +10,7 @@
  * Return: sum
  */
 
-char infinite_add(char *n1, char *n2, char *r, int size_r)
+char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
 	int m = 0, n = 0, k, l = 0, f, s, d = 0;
 
