@@ -78,7 +78,7 @@ void print_buffer(char *a, int size)
 		for (start = 0; start < size; start += 10)
 		{
 			end = (size - start < 10) ? size - start : 10;
-			printf("%08x ", start);
+			printf("%08x: ", start);
 			printHexes(a, start, end);
 			printASCII(a, start, end);
 			printf("\n");
