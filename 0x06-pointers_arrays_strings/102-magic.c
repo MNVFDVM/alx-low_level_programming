@@ -2,6 +2,8 @@
 /**
  * main - entry point
  *
+ * description: function
+ *
  * Return: 0
  */
 int main(void)
