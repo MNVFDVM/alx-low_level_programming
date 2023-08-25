@@ -6,7 +6,7 @@
  *
  * @c: character
  *
- * Return: 1 if true , 2 if false
+ * Return: 1 if true , 0 if false
  */
 int isLower(char c)
 {
@@ -42,6 +42,7 @@ char *cap_string(char *d)
 	int foundDelimiter = 1;
 
 	while (*d)
+	{
 		if (isDelimiter(*d))
 			foundDelimiter = 1;
 		else if (isLower(*d) && foundDelimiter)
