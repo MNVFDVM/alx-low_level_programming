@@ -18,6 +18,6 @@ void print_diagsums(int *a, int size)
 		n2 += a[size - i - 1];
 		a += size;
 	}
-	print("%d, ", n1);
-	print("%d\n", n2);
+	printf("%d, ", n1);
+	printf("%d\n", n2);
 }
