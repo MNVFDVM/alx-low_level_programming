@@ -31,7 +31,7 @@ int is_palindrome(char *c)
 {
 	int end = last_index(c);
 
-	return (check (c, 0, end - 1, end % 2));
+	return (check(c, 0, end - 1, end % 2));
 }
 
 /**
