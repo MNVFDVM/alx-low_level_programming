@@ -52,5 +52,5 @@ int check(char *c, int start, int end, int m)
 	else if (c[start] != c[end])
 		return (0);
 	else
-		return (check (c, start + 1, end - 1, m);
+		return (check (c, start + 1, end - 1, m));
 }
