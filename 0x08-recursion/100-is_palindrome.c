@@ -31,7 +31,7 @@ int is_palindrome(char *c)
 {
 	int end = last_index(c);
 
-	return(check (c, 0, end - 1, end % 2));
+	return(check(c, 0, end - 1, end % 2));
 }
 
 /**
@@ -52,5 +52,5 @@ int check(char *c, int start, int end, int m)
 	else if (c[start] != c[end])
 		return (0);
 	else
-		return (check (c, start + 1, end - 1, m));
+		return (check(c, start + 1, end - 1, m));
 }
