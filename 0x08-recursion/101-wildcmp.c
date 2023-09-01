@@ -49,7 +49,7 @@ int wildcmp(char *c1, char *c2)
 {
 	int r = 0;
 
-	if (!c1 && c2 == '*' && !*move_past_star(c2))
+	if (!*c1 && *c2 == '*' && !*move_past_star(c2))
 		return (1);
 	if (*c1 == *c2)
 	{
