@@ -23,7 +23,7 @@ int _atoi(char *s)
 	while (j < len && f == 0)
 	{
 		if (s[j] == '-')
-			b++;
+			++b;
 		if (s[j] >= '0' && s[j] <= '9')
 		{
 			g = s[j] - '0';
@@ -32,7 +32,7 @@ int _atoi(char *s)
 			n = n * 10 + g;
 			f = 1;
 			if (s[j + 1] < '0' || s[j + 1] > '9')
-			break;
+				break;
 			f = 0;
 		}
 		j++;
