@@ -15,14 +15,14 @@ int _strlen(char *s)
 	return (size);
 }
 /**
- * argstoster - description
+ * argstostr - description
  *
  * @ac: int
  * @av: arguments
  *
  * Return: string
  */
-char *argstoster(int ac, char **av)
+char *argstostr(int ac, char **av)
 {
 	int i = 0, n = 0, j = 0, c = 0;
 	char *s;
