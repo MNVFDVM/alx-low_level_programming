@@ -13,8 +13,10 @@ int wrdcnt(char *s)
 	for (j = 0; s[j]; j++)
 	{
 		if (s[j] == ' ')
+		{
 			if (s[j + 1] != ' ' && s[j + 1] != '\0')
 				m++;
+		}
 		else if (j == 0)
 				m++;
 	}
@@ -61,7 +63,7 @@ char **strtow(char *str)
 				return (NULL);
 			}
 			for (l = 0; l < y; l++)
-				w[c][l] = str[x][l];
+				w[c][l] = str[x + l];
 			w[c][l] = '\0';
 			c++;
 			x += y;
