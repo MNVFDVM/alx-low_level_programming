@@ -8,21 +8,25 @@
  */
 int wrdcnt(char *s)
 {
-	int j, m = 0;
+	int f, c, w;
 
-	for (j = 0; s[j]; j++)
+
+	f = 0;
+	w = 0;
+
+	for (c = 0; s[c] != '\0'; c++)
 	{
-		if (s[j] == ' ')
+		if (s[c] == ' ')
+			f = 0;
+		else if (f == 0)
 		{
-			if (s[j + 1] != ' ' && s[j + 1] != '\0')
-				m++;
+			f = 1;
+			w++;
 		}
-		else if (j == 0)
-				m++;
 	}
-	m++;
-	return (m);
+	return (w);
 }
+
 /**
  * strtow - split a string into words
  *
@@ -30,6 +34,7 @@ int wrdcnt(char *s)
  *
  * Return: pointer to array of strings
  */
+
 char **strtow(char *str)
 {
 	int x, y, k, l, n = 0, c = 0;
