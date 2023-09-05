@@ -20,7 +20,7 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		return (1);
 	}
-	n = atoi(argv[i]);
+	n = atoi(argv[j]);
 	r = 0;
 	if (n < 0)
 	{
