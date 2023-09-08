@@ -31,10 +31,10 @@ void *_calloc(unsigned int m, unsigned int size)
 
 	if (size == 0 || m == 0)
 		return (NULL);
-	x = malloc(sizeof(int) * m);
+	x = malloc(size * m);
 
-	if (x == 0)
+	if (x == NULL)
 		return (NULL);
-	_memset(x, 0, sizeof(int) * m);
+	_memset(x, 0, size * m);
 	return (x);
 }
