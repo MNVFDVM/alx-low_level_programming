@@ -3,7 +3,7 @@
 /**
  * *_memset - fills memory with constant bytes
  *
- * @*s: pointer to the constant
+ * @s: pointer to the constant
  * @b: constant
  * @n: max bytes to use
  *
@@ -11,11 +11,11 @@
  */
 char *_memset(char *s, char b, unsigned int n)
 {
-	char *ptr = s;
+	unsigned int i;
 
-	while (n--)
-		*s++ = b;
-	return (ptr);
+	for (i = 0; i < n; i++)
+		s[i] = b;
+	return (s);
 }
 /**
  * *_calloc - allocates memory from array using malloc
