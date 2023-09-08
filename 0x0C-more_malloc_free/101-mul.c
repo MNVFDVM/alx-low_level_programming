@@ -27,8 +27,8 @@ void _puts(char *str)
  */
 int _atoi(const char *s)
 {
-	int g = 0;
-	unsigned long int r, f, i;
+	int g = 1;
+	unsigned long int r = 0, f, i;
 
 	for (f = 0; !(s[f] >= 48 && s[f] <= 57); f++)
 	{
