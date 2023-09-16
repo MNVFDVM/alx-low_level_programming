@@ -1,4 +1,3 @@
-#include "function_pointers.h"
 #include <stdlib.h>
 #include <stdio.h>
 /**
@@ -9,17 +8,32 @@
  *
  * Return: 0
  */
-int main(int argc, char **argv)
+int main(int argc, char *argv[])
 {
-	char *m = (char *)main;
-	int n;
+	int b, j;
+	char *arr;
 
 	if (argc != 2)
-		printf("Error\n"), exit(1);
-	n = atoi(argv[1]);
-	if (n < 0)
-		printf("Error\n"), exit(2);
-	while (n--)
-		printf("%02hhx%s, *m++, n ? " " : "\n");
+	{
+		printf("Error\n");
+		exit(1);
+	}
+	b = atoi(argv[1]);
+	if (b < 0)
+	{
+		printf("Error\n");
+		exit(2);
+	}
+	arr = (char *)main;
+	for (j = 0; j < b; j++)
+	{
+		if (j == b - 1)
+		{
+			printf("%02hhx\n", arr[j]);
+			break;
+		}
+		printf("%02hhx ", arr[j]);
+	}
 	return (0);
 }
+
