@@ -1,4 +1,7 @@
 #include "3-calc.h"
+#include <stdlib.h>
+#include <stdio.h>
+#include "function_pointers.h"
 /**
  * main - check the code for school students
  *
