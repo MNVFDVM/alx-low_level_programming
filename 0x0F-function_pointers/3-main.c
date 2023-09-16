@@ -18,7 +18,7 @@ int main(int argc, char **argv)
 		printf("Error\n"), exit(98);
 
 	a = atoi(argv[1]);
-	b = atoi(argv[2]);
+	b = atoi(argv[3]);
 
 	op_func = get_op_func(argv[2]);
 	if (!op_func)
