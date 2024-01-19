@@ -3,15 +3,15 @@
 /**
   * _print_rev_recursion - main function
   *
-  * @s: Function parameter
+  * @c: Function parameter
   *
   * Return: Voidu
   */
-void _print_rev_recursion(char *s)
+void _print_rev_recursion(char *c)
 {
-	if (*s)
+	if (*c)
 	{
-		_print_rev_recursion(s + 1);
-		_putchar(*s);
+		_print_rev_recursion(c + 1);
+		_putchar(*c);
 	}
 }

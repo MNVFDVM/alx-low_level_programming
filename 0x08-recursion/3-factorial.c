@@ -3,15 +3,15 @@
 /**
   * factorial - function parameter
   *
-  * @n: function parameter
+  * @m: function parameter
   *
-  * Return: Function n.
+  * Return: Function m.
   */
-int factorial(int n)
+int factorial(int m)
 {
-	if (n < 0)
+	if (m < 0)
 		return (-1);
-	if (n == 0)
+	if (m == 0)
 		return (1);
-	return (n * factorial(n - 1));
+	return (m * factorial(m - 1));
 }

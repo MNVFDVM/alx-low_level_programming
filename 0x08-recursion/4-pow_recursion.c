@@ -1,23 +1,23 @@
 #include "main.h"
 /**
   * _pow_recursion - function name
-  * @x: parameter 1
-  * @y: parameter 2
+  * @i: parameter 1
+  * @j: parameter 2
   * Return: value of a given number passed to the function
   */
 
 
-int _pow_recursion(int x, int y)
+int _pow_recursion(int i, int j)
 {
 
-	if (y < 0)
+	if (j < 0)
 		return (-1);
 
-	else if (y == 0)
+	else if (j == 0)
 		return (1);
 
 	else
-		return (x * _pow_recursion(x, (y - 1)));
+		return (i * _pow_recursion(i, (j - 1)));
 
 	return (0);
 }
