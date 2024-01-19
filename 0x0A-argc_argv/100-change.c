@@ -14,6 +14,7 @@ int main(int argc, char *argv[])
 	{
 		int j, l = 0, money = atoi(argv[1]);
 		int c[] = {25, 10, 5, 2, 1};
+
 		for (j = 0; j < 5; j++)
 		{
 			if (money >= c[j])
