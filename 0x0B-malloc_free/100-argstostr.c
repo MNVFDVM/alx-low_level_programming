@@ -11,39 +11,39 @@
 char *argstostr(int ac, char **av)
 {
 	char *str, *s;
-	int i, j, k, len = 0;
+	int x, y, k, l = 0;
 
 	if (ac == 0 || av == NULL)
 		return (NULL);
 
-	for (i = 0; i < ac; i++)
+	for (x = 0; x < ac; x++)
 	{
-		s = av[i];
-		j = 0;
+		s = av[x];
+		y = 0;
 
-		while (s[j++])
-			len++;
-		len++;
+		while (s[y++])
+			l++;
+		l++;
 	}
 
-	str = (char *)malloc(sizeof(char) * (len + 1));
+	str = (char *)malloc(sizeof(char) * (l + 1));
 	if (str == NULL)
 		return (NULL);
 
-	for (i = 0, j = 0; i < ac && j < len; i++)
+	for (x = 0, y = 0; x < ac && y < l; x++)
 	{
-		s = av[i];
+		s = av[x];
 		k = 0;
 
 		while (s[k])
 		{
-			str[j] = s[k];
+			str[y] = s[k];
 			k++;
-			j++;
+			y++;
 		}
-		str[j++] = '\n';
+		str[y++] = '\n';
 	}
-	str[j] = '\0';
+	str[y] = '\0';
 
 	return (str);
 }

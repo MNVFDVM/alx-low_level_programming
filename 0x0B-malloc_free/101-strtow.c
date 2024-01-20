@@ -12,35 +12,35 @@ void create_word(char **, char *, int, int, int);
  */
 char **strtow(char *str)
 {
-	int i, flag, len;
+	int j, flag, l;
 	char **words;
 
 	if (str == NULL || str[0] == '\0' || (str[0] == ' ' && str[1] == '\0'))
 		return (NULL);
 
-	i = flag = len = 0;
-	while (str[i])
+	j = flag = l = 0;
+	while (str[j])
 	{
-		if (flag == 0 && str[i] != ' ')
+		if (flag == 0 && str[j] != ' ')
 			flag = 1;
-		if (i > 0 && str[i] == ' ' && str[i - 1] != ' ')
+		if (j > 0 && str[j] == ' ' && str[j - 1] != ' ')
 		{
 			flag = 0;
-			len++;
+			l++;
 		}
-		i++;
+		j++;
 	}
 
-	len += flag == 1 ? 1 : 0;
-	if (len == 0)
+	l += flag == 1 ? 1 : 0;
+	if (l == 0)
 		return (NULL);
 
-	words = (char **)malloc(sizeof(char *) * (len + 1));
+	words = (char **)malloc(sizeof(char *) * (l + 1));
 	if (words == NULL)
 		return (NULL);
 
 	util(words, str);
-	words[len] = NULL;
+	words[l] = NULL;
 	return (words);
 }
 
@@ -51,29 +51,29 @@ char **strtow(char *str)
 */
 void util(char **words, char *str)
 {
-	int i, j, start, flag;
+	int x, y, start, flag;
 
-	i = j = flag = 0;
-	while (str[i])
+	x = y = flag = 0;
+	while (str[x])
 	{
-		if (flag == 0 && str[i] != ' ')
+		if (flag == 0 && str[x] != ' ')
 		{
-			start = i;
+			start = x;
 			flag = 1;
 		}
 
-		if (i > 0 && str[i] == ' ' && str[i - 1] != ' ')
+		if (x > 0 && str[x] == ' ' && str[x - 1] != ' ')
 		{
-			create_word(words, str, start, i, j);
-			j++;
+			create_word(words, str, start, x, y);
+			y++;
 			flag = 0;
 		}
 
-		i++;
+		x++;
 	}
 
 	if (flag == 1)
-		create_word(words, str, start, i, j);
+		create_word(words, str, start, x, y);
 }
 
 /**
@@ -86,12 +86,12 @@ void util(char **words, char *str)
 */
 void create_word(char **words, char *str, int start, int end, int index)
 {
-	int i, j;
+	int x, y;
 
-	i = end - start;
-	words[index] = (char *)malloc(sizeof(char) * (i + 1));
+	x = end - start;
+	words[index] = (char *)malloc(sizeof(char) * (x + 1));
 
-	for (j = 0; start < end; start++, j++)
-		words[index][j] = str[start];
-	words[index][j] = '\0';
+	for (y = 0; start < end; start++, y++)
+		words[index][y] = str[start];
+	words[index][y] = '\0';
 }
