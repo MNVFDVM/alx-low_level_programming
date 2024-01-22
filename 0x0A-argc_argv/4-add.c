@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <ctype.h>
 /**
  * main - it all starts here
  *
@@ -8,18 +9,24 @@
  *
  * Return: 0
  */
-int main(int argc, char *argv[])
+int main(int argc, char **argv)
 {
-	int s = 0;
-	char *h;
+	int i, sum = 0;
 
-	while (--argc)
+	if (argc == 1)
+		printf("0\n");
+	else
 	{
-		for (h = argv[argc]; *h; h++)
-			if (*h < '0' || *h > '9')
-				return (printf("Error\n"), 1);
-		s += atoi(argv[argc]);
+		for (i = 1; i < argc; i++)
+		{
+			if (isalpha(*argv[i]))
+			{
+				printf("Error\n");
+				return (1);
+			}
+			sum += atoi(argv[i]);
+		}
+		printf("%d\n", sum);
 	}
-	printf("%d\n", s);
 	return (0);
 }
