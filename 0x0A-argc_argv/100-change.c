@@ -1,38 +1,45 @@
 #include <stdio.h>
 #include <stdlib.h>
+
 /**
- * main - print the minimum number of coins
+ * main - print the minimum number of coin to make change
  *
- * @argc: number of command line arguments
- * @argv: pointer to array of command line arguments
+ * @argc: number of arguments
+ * @argv: arguments
  *
- * Return: 0 success
+ * Return: 0
  */
 int main(int argc, char *argv[])
 {
-	if (argc == 2)
-	{
-		int j, l = 0, money = atoi(argv[1]);
-		int c[] = {25, 10, 5, 2, 1};
+	int sum = 0, rest = 0;
 
-		for (j = 0; j < 5; j++)
-		{
-			if (money >= c[j])
-			{
-				l += money / c[j];
-				money = money % c[j];
-				if (money % c[j] == 0)
-				{
-					break;
-				}
-			}
-		}
-		printf("%d\n", l);
-	}
-	else
+	if (argc != 2)
 	{
 		printf("Error\n");
 		return (1);
 	}
+	rest = atoi(argv[1]);
+	if (rest < 0)
+		printf("0\n");
+	else
+	{
+		sum += rest / 25;
+		rest %= 25;
+
+		sum += rest / 10;
+		rest %= 10;
+
+		sum += rest / 5;
+		rest %= 5;
+
+		sum += rest / 2;
+		rest %= 2;
+
+		sum += rest;
+
+		printf("%d\n", sum);
+	}
 	return (0);
 }
+
+
