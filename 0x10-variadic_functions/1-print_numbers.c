@@ -7,7 +7,7 @@
  * @n: number of arguments
  * @...: the integers to print
  *
- * Return: vois
+ * Return: void
  */
 void print_numbers(const char *separator, const unsigned int n, ...)
 {
