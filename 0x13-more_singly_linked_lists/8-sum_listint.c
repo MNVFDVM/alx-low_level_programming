@@ -1,4 +1,4 @@
-#incldue "lists.h"
+#include "lists.h"
 /**
  * sum_listint - return sum of all data
  * @head: pointer to first node
