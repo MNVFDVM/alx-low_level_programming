@@ -9,6 +9,10 @@
 #define ERR_NOWRITE "Error: Can't write to %s\n"
 #define ERR_NOCLOSE "Error: Can't close fd %d\n"
 #define PERMISSIONS (S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH)
+
+#define READ_BUF_SIZE 1024
+
+
 /**
  * main - program
  *
@@ -50,6 +54,6 @@ int main(int ac, char **av)
 		dprintf(STDERR_FILENO, ERR_NOCLOSE, from), exit(100);
 
 	if (to)
-		dprintf(STDERR_FILENO, ERR_NOCLOSE, to), exit(100);
+		dprintf(STDERR_FILENO, ERR_NOCLOSE, from), exit(100);
 	return (EXIT_SUCCESS);
 }
