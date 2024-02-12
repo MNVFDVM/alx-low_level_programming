@@ -50,6 +50,6 @@ int main(int ac, char **av)
 		dprintf(STDERR_FILENO, ERR_NOCLOSE, from), exit(100);
 
 	if (to)
-		dprintf(STDERR_FILENO, ERR_NOCLOSE, from), exit(100);
+		dprintf(STDERR_FILENO, ERR_NOCLOSE, to), exit(100);
 	return (EXIT_SUCCESS);
 }
