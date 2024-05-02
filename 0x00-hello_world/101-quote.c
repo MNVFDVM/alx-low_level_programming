@@ -3,11 +3,11 @@
 /**
  * my_puts - function to print
  *
- * str: characters to print grtg rtgthyt tyhyhyth rtyeye
+ * @str: characters to print
  *
  * Return: void
  */
-void my_puts(const char *str)
+void my_puts(char *str)
 {
 	while (*str != '\0')
 	{
