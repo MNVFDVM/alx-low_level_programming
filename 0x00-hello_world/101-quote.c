@@ -1,15 +1,32 @@
-#include<unistd.h>
+#include <stdio.h>
+/**
+ * my_puts - function to print
+ *
+ * *str: the string to print
+ *
+ * Return: void
+ */
+
+void my_puts(char *str)
+{
+	while (*str != '\0')
+	{
+		putchar(*str);
+		str++;
+	}
+	putchar('\n');
+}
+
 /**
  * main - entry point
  *
- * description: print a quote using write function
- *
- * Return: 1 (error).
+ * Return: 1
  */
+
 int main(void)
 {
-	char quo[] = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
-
-	write(1, quo, 59);
+	char *message = "and that piece of art is useful\" - Dora Korpar, 2015-10-19";
+	my_puts(message);
 	return (1);
 }
+
