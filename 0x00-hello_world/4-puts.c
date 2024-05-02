@@ -1,10 +1,10 @@
 #include <stdio.h>
-/**
+
+/*
  * main - entry point
  *
- * discription: program to print a statement using puts
  *
- * Return: Always 0 (success)
+ * return: 0 success
  */
 int main(void)
 {
