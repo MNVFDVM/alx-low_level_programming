@@ -10,10 +10,13 @@ int main(void)
 
 	do {
 		if (c == 'q' || c == 'e')
+		{
+			c++;
 			continue;
+		}
 		putchar(c);
 		c++;
 	} while (c <= 'z');
-	putchar ('\n');
+	putchar('\n');
 	return (0);
 }
