@@ -2,20 +2,16 @@
 /**
  * main - entry point
  *
- * description: print alphabets from z to a
- *
- * Return: Always 0 (success)
+ * Return: 0
  */
 int main(void)
 {
-	char ch = 'z';
+	char c = 'z';
 
-	while (ch >= 'a')
-	{
-		putchar(ch);
-		ch--;
-	}
+	do {
+		putchar(c);
+		c--;
+	} while (c >= 'a');
 	putchar('\n');
-
 	return (0);
 }
