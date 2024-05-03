@@ -2,25 +2,22 @@
 /**
  * main - entry point
  *
- * description: print alphabet in lower case then in upper case
- *
- * Return: Always 0 success
+ * Return: 0
  */
 int main(void)
 {
-	char ch = 'a';
-	char CH = 'A';
+	char c = 97;
 
-	while (ch <= 'z')
+	for(; c <= 122; )
 	{
-		putchar(ch);
-		ch++;
+		putchar(c);
+		c++;
 	}
-
-	while (CH <= 'Z')
+	c = 65;
+	for (; c <= 90;)
 	{
-		putchar(CH);
-		CH++;
+		putchar(c);
+		c++;
 	}
 	putchar('\n');
 	return (0);
