@@ -2,26 +2,22 @@
 /**
  * main - entry point
  *
- * description: print 0, 1, -9
- *
- * Return: Always 0 (success)
+ * Return: 0
  */
 int main(void)
 {
-	int digit = 0;
+	int c = 48;
 
-	while (digit <= 9)
-	{
-		putchar(digit + 48);
-
-		if (digit != 9)
+	do {
+		if (c == 57)
 		{
-			putchar(',');
-			putchar(' ');
+			putchar((char)c);
+			break;
 		}
-		digit++;
-	}
-	putchar('\n');
-
+		putchar((char)c);
+		putchar(',');
+		putchar(' ');
+		c++;
+	} while (c <= 57);
 	return (0);
 }
