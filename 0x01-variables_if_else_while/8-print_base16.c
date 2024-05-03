@@ -2,23 +2,17 @@
 /**
  * main - entry point
  *
- * description: print numbers in base 16 in lowercase
- *
- * Return: Always 0 (success)
+ * Return: 0
  */
 int main(void)
 {
-	int digit = 48;
+	char c = '0';
 
-	while (digit <= 102)
-	{
-		putchar(digit);
-
-		if (digit == 57)
-			digit += 39;
-		digit++;
-	}
+	for (; c <= '9'; c++)
+		putchar(c);
+	c = 'a';
+	for (; c <= 'f'; c++)
+		putchar(c);
 	putchar('\n');
-
 	return (0);
 }
