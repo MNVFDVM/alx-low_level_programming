@@ -2,20 +2,14 @@
 /**
  * main - entry point
  *
- * description: print the alphabet letters
- *
- * Return: Always 0 (success)
+ * Return: 0
  */
+
 int main(void)
 {
-	char ch = 'a';
+	char c = 'a';
 
-	while (ch <= 'z')
-	{
-		putchar(ch);
-		ch++;
-	}
+	while (c <= 'z')
+		putchar(c++);
 	putchar('\n');
-
-	return (0);
 }
