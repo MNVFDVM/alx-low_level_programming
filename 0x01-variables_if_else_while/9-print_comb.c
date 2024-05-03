@@ -15,7 +15,7 @@ int main(void)
 			putchar(',');
 			putchar(' ');
 		}
-		putchar('\n');
 	} while (c <= 57);
+	putchar('\n');
 	return (0);
 }
