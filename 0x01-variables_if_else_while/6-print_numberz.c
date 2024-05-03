@@ -2,20 +2,16 @@
 /**
  * main - entry point
  *
- * description: print 0, 9 using putchar while using int variable
- *
- * Return: Always 0 (success)
+ * Return: 0
  */
+
 int main(void)
 {
-	int digit = 0;
+	int  c = 48;
 
-	while (digit <= 9)
-	{
-		putchar(digit + '0');
-		digit++;
-	}
+	do {
+		putchar((char)c);
+		c++;
+	} while (c <= 57);
 	putchar('\n');
-
-	return (0);
 }
