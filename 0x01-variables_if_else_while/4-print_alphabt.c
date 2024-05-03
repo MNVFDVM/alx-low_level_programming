@@ -2,23 +2,17 @@
 /**
  * main - entry point
  *
- * description: print all alphabet letters except q and e
- *
- * Return: Always 0 (success)
+ * Return: 0
  */
 int main(void)
 {
-	char ch = 'a';
+	char c = 'a';
 
-	while (ch <= 'z')
-	{
-		if (ch == 'e' || ch == 'q')
-			ch++;
-		putchar (ch);
-		ch++;
-	}
-	putchar('\n');
-
+	do {
+		if (c == 'q' || c == 'e')
+			continue;
+		putchar(c);
+		c++;
+	} while (c <= 'z');
 	return (0);
 }
-
