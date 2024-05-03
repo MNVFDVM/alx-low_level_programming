@@ -9,15 +9,13 @@ int main(void)
 	int c = 48;
 
 	do {
-		if (c == 57)
-		{
-			putchar((char)c);
-			break;
-		}
 		putchar((char)c);
-		putchar(',');
-		putchar(' ');
-		c++;
+		if (c != 57)
+		{
+			putchar(',');
+			putchar(' ');
+		}
+		putchar('\n');
 	} while (c <= 57);
 	return (0);
 }
