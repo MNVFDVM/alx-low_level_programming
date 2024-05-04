@@ -2,35 +2,25 @@
 /**
  * main - entry point
  *
- * description: print all possible different cobinations of two digits
- *
- * Return: Always 0 (success)
+ * Return: 0
  */
 int main(void)
 {
-	int digit1 = 0, digit2;
+	int i, j;
 
-	while (digit1 <= 9)
+	for (i = 48; i <= 57; i++)
 	{
-		digit2 = 0;
-		while (digit2 <= 9)
+		for (j = 48; j <= 57; j++)
 		{
-			if (digit1 != digit2 && digit1 < digit2)
+			if (j != i && i < j)
 			{
-				putchar(digit1 + 48);
-				putchar(digit2 + 48);
-
-				if (digit1 + digit2 != 17)
-				{
-					putchar(',');
-					putchar(' ');
-				}
+				putchar((char)i);
+				putchar((char)j);
+				putchar(',');
+				putchar(' ');
 			}
-			digit2++;
 		}
-		digit1++;
 	}
 	putchar('\n');
-
 	return (0);
 }
