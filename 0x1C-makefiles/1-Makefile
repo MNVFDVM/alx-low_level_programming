@@ -1,5 +1,7 @@
-CC=gcc
-SRC=main.c holberton.c
+# gcc and some variables 1th make file
 
-all: main.c holberton.c
-	$(CC) $(SRC) -o holberton
+CC = gcc
+SRC = main.c school.c
+
+all: ${SRC}
+	${CC} ${SRC} -o school
