@@ -1,2 +1,5 @@
-all: main.c holberton.c
-	gcc main.c holberton.c -o holberton
+# create our first makefile
+
+
+all: main.c school.c
+	gcc main.c school.c -o school
